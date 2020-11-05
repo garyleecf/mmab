@@ -11,7 +11,7 @@ In Python:
 ```python
 import gym
 env = gym.make('gym_mmab:mmab-v0', n_players=3, n_arms=5) # ; or
-env = gym.make('gym_cardgame:mmab-v0') # If you leave arguments empty, default: n_players=3, n_arms=10
+env = gym.make('gym_mmab:mmab-v0') # If you leave arguments empty, default: n_players=3, n_arms=10
 
 # Game Simulation Starts:
 observations = env.reset()

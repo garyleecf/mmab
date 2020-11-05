@@ -8,7 +8,7 @@ n_steps = 1000
 
 def main():
     env = gym.make('gym_mmab:mmab-v0', n_players=3, n_arms=5)
-    # env = gym.make('gym_cardgame:mmab-v0') # If you leave arguments empty, default: n_players=3, n_arms=10
+    # env = gym.make('gym_mmab:mmab-v0') # If you leave arguments empty, default: n_players=3, n_arms=10
 
 
     agent0_candidates = [agents.Agent(0, env.n_arms), agents.RandomAgent(0, env.n_arms), agents.QAgent(0, env.n_arms)]
@@ -27,7 +27,7 @@ def main():
         tot_rewards = np.array(saved_obs_history[n][-100:]).sum(axis=0)[0]
         print(f"{type(agent0).__name__:>14}: {tot_rewards}")
     print()
-    
+
 def test_selectedagent(env, agent0):
     env.reset()
 
